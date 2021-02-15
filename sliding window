@@ -1,0 +1,27 @@
+#include<stdio.h>
+int main()
+{
+    int ws,n,f[50];
+    printf("Enter Window Size:\n");
+    scanf("%d",&ws);
+    printf("Enter no.of frames:\n");
+    scanf("%d",&n);
+    printf("Enter frames:\n");
+    for(int i=1;i<=n;i++)
+        scanf("%d",&f[i]);
+    for(int i=1;i<=n;i++)
+    {
+        if(i%ws==0)
+        {
+            printf("%d\n",f[i]);
+            printf("Acknowledgement is received by sender\n");
+        }
+        else
+        printf("%d ",f[i]);
+    }
+    if(n%ws!=0)
+    {
+        printf("\nAcknowledgement is received by sender");
+    }
+    return 0;
+}
