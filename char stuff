@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char sd,ed,a[100];
+        printf("Enter characters to be stuffed:");
+        scanf("%s", a);
+        printf("\nEnter a character that represents starting delimiter:");
+        scanf(" %c", &sd);
+        printf("\nEnter a character that represents ending delimiter:");
+        scanf(" %c", &ed);
+    int len=strlen(a);
+    printf("%c",sd);
+    for(int i=0;i<len;i++)
+    {
+        if( a[i]==sd || a[i]==ed )
+            printf("%c%c",a[i],a[i]);
+        else
+            printf("%c",a[i]);
+    }
+    printf("%c",ed);
+    return 0;
+}
