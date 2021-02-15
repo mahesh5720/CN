@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main()
+{
+    int ws,a,s=0;
+    printf("Enter Window Size:\n");
+    scanf("%d",&ws);
+    while(1)
+    {
+        for(int i=0;i<ws;i++)
+        {
+            printf("%d frame has been transmitted\n",s);
+            s++;
+            if(s==ws)
+            break;
+        }
+        printf("Enter the last Acknowledgement received:\n");
+        scanf("%d",&a);
+        if(a==ws)
+        break;
+        else
+        s=a;
+    }
+    return 0;
+}
